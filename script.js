@@ -1,7 +1,7 @@
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-anchor.addEventListener("click", function(e) {
-e.preventDefault();
-document.querySelector(this.getAttribute("href"))
-.scrollIntoView({ behavior: "smooth" });
-});
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
 });
